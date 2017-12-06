@@ -1,9 +1,9 @@
 module Main where
 
-import Day03
+import Day05
 
 main :: IO ()
 main = do
-    input <- readFile "inputs/Day04.txt"
-    putStrLn $ show $ f1 289326
-    putStrLn $ show $ f2 289326
+    input <- readFile "inputs/Day05.txt"
+    putStrLn $ show $ f1 input
+    putStrLn $ show $ f2 input
