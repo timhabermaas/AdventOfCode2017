@@ -1,5 +1,7 @@
 import qualified Day01 as Day01
 import qualified Day02 as Day02
+import qualified Day03 as Day03
+import qualified Day04 as Day04
 import Test.Hspec
 
 main :: IO ()
@@ -29,6 +31,7 @@ main = hspec $ do
         Day01.f2 "12131415" `shouldBe` 4
       it "solution" $ do
         Day01.f2 Day01.input2 `shouldBe` 1156
+
   describe "Day02" $ do
     describe "solution 1" $ do
       it "case 1" $ do
@@ -36,3 +39,25 @@ main = hspec $ do
     describe "solution 2" $ do
       it "case 1" $ do
         Day02.f2 "5 9 2 8\n9 4 7 3\n3 8 6 5" `shouldBe` 9
+
+  describe "Day03" $ do
+    describe "solution 1" $ do
+      it "case 1" $ do
+        Day03.f1 1 `shouldBe` 0
+      it "solution" $ do
+        Day03.f1 289326 `shouldBe` 419
+    describe "solution 2" $ do
+      it "solution" $ do
+        Day03.f2 289326 `shouldBe` 295229
+
+  describe "Day04" $ do
+    describe "solution 1" $ do
+      it "cases" $ do
+        Day04.f1 "aa bb cc dd ee" `shouldBe` 1
+        Day04.f1 "aa bb cc dd aa" `shouldBe` 0
+        Day04.f1 "aa bb cc dd aaa" `shouldBe` 1
+    describe "solution 2" $ do
+      it "cases" $ do
+        Day04.f2 "abcde fghij" `shouldBe` 1
+        Day04.f2 "abcde xyz ecdab" `shouldBe` 0
+        Day04.f2 "a ab abc abd abf abj" `shouldBe` 1
