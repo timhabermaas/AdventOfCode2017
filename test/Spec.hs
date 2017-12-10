@@ -3,6 +3,7 @@ import qualified Day02 as Day02
 import qualified Day03 as Day03
 import qualified Day04 as Day04
 import qualified Day05 as Day05
+import qualified Day06 as Day06
 import Test.Hspec
 
 main :: IO ()
@@ -70,3 +71,11 @@ main = hspec $ do
     describe "solution 2" $ do
       it "cases" $ do
         Day05.f2 "0\n3\n0\n1\n-3" `shouldBe` 10
+
+  describe "Day06" $ do
+    describe "solution 1" $ do
+      it "cases" $ do
+        Day06.f1 "0 2 7 0" `shouldBe` 5
+    describe "solution 2" $ do
+      it "cases" $ do
+        Day06.f2 "0 2 7 0" `shouldBe` 4
